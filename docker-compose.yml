@@ -1,0 +1,19 @@
+# This docker-compose.yml file defines the services, networks, and volumes
+# for running the Paperweight PDF compression application.
+
+version: '3.8' # Specifies the version of the Docker Compose file format.
+
+services:
+  # Defines the main application service.
+  paperweight:
+    # Tells Docker Compose to build the image from the Dockerfile in the current directory.
+    # You will need to have the cloned repository in the same directory as this file.
+    build: .
+    # The name of the container that will be created.
+    container_name: paperweight_app
+    # Maps port 8000 on the host to port 8000 on the container.
+    # This allows you to access the web interface at http://localhost:8000.
+    ports:
+      - "8000:8877"
+    # Restarts the container automatically if it stops unexpectedly.
+    restart: unless-stopped
