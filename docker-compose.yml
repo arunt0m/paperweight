@@ -14,6 +14,6 @@ services:
     # Maps port 8000 on the host to port 8000 on the container.
     # This allows you to access the web interface at http://localhost:8000.
     ports:
-      - "8000:8877"
+      - "8877:8877"
     # Restarts the container automatically if it stops unexpectedly.
     restart: unless-stopped
